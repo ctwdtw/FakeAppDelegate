@@ -14,20 +14,22 @@ class FakeAppDelegateTests: XCTestCase {
     }
     
     func test_logViewLifeCycle() {
+        let (sut, loggerSpy) = makeSUT()
+        XCTAssertEqual(loggerSpy.callCount, 0, "does not log when initiate")
+        
+        sut.simulateViewDidLoad()
+        XCTAssertEqual(loggerSpy.callCount, 1, "log when view did load")
+        
+        sut.simulateViewWillAppear()
+        XCTAssertEqual(loggerSpy.callCount, 2, "log again when view will appear")
+    }
+    
+    private func makeSUT() -> (sut: ViewController, loggerSpy: LoggerSpy) {
         let loggerSpy = LoggerSpy()
         Logger.shared = loggerSpy
         let sut = ViewController()
         
-        XCTAssertEqual(loggerSpy.callCount, 0, "does not log when initiate")
-        
-        sut.loadViewIfNeeded()
-        
-        XCTAssertEqual(loggerSpy.callCount, 1, "log when view did load")
-        
-        sut.beginAppearanceTransition(true, animated: false)
-        sut.endAppearanceTransition()
-        
-        XCTAssertEqual(loggerSpy.callCount, 2, "log again when view will appear")
+        return (sut, loggerSpy)
     }
     
     class LoggerSpy: Logger {
@@ -35,5 +37,16 @@ class FakeAppDelegateTests: XCTestCase {
         override func log(_ message: String) {
             callCount += 1
         }
+    }
+}
+
+private extension UIViewController {
+    func simulateViewDidLoad() {
+        loadViewIfNeeded()
+    }
+    
+    func simulateViewWillAppear() {
+        beginAppearanceTransition(true, animated: false)
+        endAppearanceTransition()
     }
 }
