@@ -15,6 +15,8 @@
 		639106E026E3A97000A53FC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639106DE26E3A97000A53FC4 /* LaunchScreen.storyboard */; };
 		639106EB26E3A97000A53FC4 /* FakeAppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639106EA26E3A97000A53FC4 /* FakeAppDelegateTests.swift */; };
 		639106F626E3A97000A53FC4 /* FakeAppDelegateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639106F526E3A97000A53FC4 /* FakeAppDelegateUITests.swift */; };
+		6391070426E473F400A53FC4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6391070326E473F400A53FC4 /* main.swift */; };
+		6391070C26E4B72200A53FC4 /* AppDelegateForDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6391070A26E4ADFF00A53FC4 /* AppDelegateForDebug.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		639106F126E3A97000A53FC4 /* FakeAppDelegateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakeAppDelegateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		639106F526E3A97000A53FC4 /* FakeAppDelegateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAppDelegateUITests.swift; sourceTree = "<group>"; };
 		639106F726E3A97000A53FC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6391070326E473F400A53FC4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6391070A26E4ADFF00A53FC4 /* AppDelegateForDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateForDebug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,9 @@
 		639106D226E3A96B00A53FC4 /* FakeAppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				6391070326E473F400A53FC4 /* main.swift */,
 				639106D326E3A96B00A53FC4 /* AppDelegate.swift */,
+				6391070A26E4ADFF00A53FC4 /* AppDelegateForDebug.swift */,
 				639106D526E3A96B00A53FC4 /* SceneDelegate.swift */,
 				639106D726E3A96B00A53FC4 /* ViewController.swift */,
 				639106D926E3A96B00A53FC4 /* Main.storyboard */,
@@ -260,6 +266,8 @@
 			files = (
 				639106D826E3A96B00A53FC4 /* ViewController.swift in Sources */,
 				639106D426E3A96B00A53FC4 /* AppDelegate.swift in Sources */,
+				6391070C26E4B72200A53FC4 /* AppDelegateForDebug.swift in Sources */,
+				6391070426E473F400A53FC4 /* main.swift in Sources */,
 				639106D626E3A96B00A53FC4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +453,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.paul.lee.FakeAppDelegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -485,6 +494,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.paul.lee.FakeAppDelegateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FakeAppDelegate.app/FakeAppDelegate";
@@ -527,6 +537,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.paul.lee.FakeAppDelegateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FakeAppDelegate;
@@ -553,6 +564,131 @@
 			};
 			name = Release;
 		};
+		6391071126E4D1E500A53FC4 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Staging;
+		};
+		6391071226E4D1E500A53FC4 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S9CF6BJNF;
+				INFOPLIST_FILE = FakeAppDelegate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paul.lee.FakeAppDelegate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGE;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Staging;
+		};
+		6391071326E4D1E500A53FC4 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S9CF6BJNF;
+				INFOPLIST_FILE = FakeAppDelegateTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paul.lee.FakeAppDelegateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGE;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FakeAppDelegate.app/FakeAppDelegate";
+			};
+			name = Staging;
+		};
+		6391071426E4D1E500A53FC4 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S9CF6BJNF;
+				INFOPLIST_FILE = FakeAppDelegateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paul.lee.FakeAppDelegateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGE;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FakeAppDelegate;
+			};
+			name = Staging;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -560,6 +696,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				639106F826E3A97000A53FC4 /* Debug */,
+				6391071126E4D1E500A53FC4 /* Staging */,
 				639106F926E3A97000A53FC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -569,6 +706,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				639106FB26E3A97000A53FC4 /* Debug */,
+				6391071226E4D1E500A53FC4 /* Staging */,
 				639106FC26E3A97000A53FC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -578,6 +716,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				639106FE26E3A97000A53FC4 /* Debug */,
+				6391071326E4D1E500A53FC4 /* Staging */,
 				639106FF26E3A97000A53FC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -587,6 +726,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6391070126E3A97000A53FC4 /* Debug */,
+				6391071426E4D1E500A53FC4 /* Staging */,
 				6391070226E3A97000A53FC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
